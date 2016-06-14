@@ -1,11 +1,16 @@
 package com.ljp.ani;
 
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class TestRolateAnimActivity extends Activity {
+	
 	MyImageView UI_learn_me,UI_show_me,UI_contact_me,UI_weather;
 
 	@Override
@@ -19,6 +24,7 @@ public class TestRolateAnimActivity extends Activity {
 		UI_contact_me = (MyImageView) findViewById(R.id.contact_me);
 		UI_weather = (MyImageView) findViewById(R.id.weather);
 		
+	
 		
 		//on click hander for the learn_me UI
 		UI_learn_me.setOnClickIntent(new MyImageView.OnViewClick() {
@@ -28,6 +34,11 @@ public class TestRolateAnimActivity extends Activity {
 			public void onClick() {
 				Toast.makeText(TestRolateAnimActivity.this, "learn_me", 100)
 						.show();
+				Intent intent = new Intent();
+        		intent.setClass(TestRolateAnimActivity.this,learn_me.class);
+        		startActivity(intent);
+        		//TestRolateAnimActivity.this.finish();
+        		
 			}
 		});
 		
