@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 public class TestRolateAnimActivity extends Activity {
-	//MyImageView joke;
+	MyImageView joke;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
