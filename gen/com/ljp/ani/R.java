@@ -19,10 +19,10 @@ public final class R {
         public static final int right=0x7f020005;
     }
     public static final class id {
-        public static final int c_constellation=0x7f050002;
-        public static final int c_idea=0x7f050001;
-        public static final int c_joke=0x7f050000;
-        public static final int c_recommend=0x7f050003;
+        public static final int contact_me=0x7f050003;
+        public static final int learn_me=0x7f050000;
+        public static final int show_me=0x7f050001;
+        public static final int weather=0x7f050002;
     }
     public static final class layout {
         public static final int main=0x7f030000;

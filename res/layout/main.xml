@@ -14,7 +14,7 @@
                 android:orientation="vertical" >
 
                 <com.ljp.ani.MyImageView
-                    android:id="@+id/c_joke"
+                    android:id="@+id/learn_me"
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -23,7 +23,7 @@
                     android:src="@drawable/left_top" />
 
                 <com.ljp.ani.MyImageView
-                    android:id="@+id/c_idea"
+                    android:id="@+id/show_me"
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -38,7 +38,7 @@
 			     android:orientation="vertical" >
 
 			     <com.ljp.ani.MyImageView
-			         android:id="@+id/c_constellation"
+			         android:id="@+id/weather"
 			         android:layout_width="134dp"
 			         android:layout_height="fill_parent"
 			         android:layout_margin="2dp"
@@ -47,7 +47,7 @@
 			         android:src="@drawable/right" />
 
 			     <com.ljp.ani.MyImageView
-			         android:id="@+id/c_recommend"
+			         android:id="@+id/contact_me"
 			         android:layout_width="134dp"
 			         android:layout_height="fill_parent"
 			         android:layout_margin="2dp"
