@@ -2,6 +2,7 @@ package com.ljp.ani;
 
 
 import com.learnme.StaringAct;
+import com.showme.showme;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -52,6 +53,10 @@ public class TestRolateAnimActivity extends Activity {
 			public void onClick() {
 				Toast.makeText(TestRolateAnimActivity.this, "show_me", 100)
 						.show();
+				
+				Intent intent = new Intent();
+        		intent.setClass(TestRolateAnimActivity.this,showme.class);
+        		startActivity(intent);
 			}
 		});
 		

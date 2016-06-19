@@ -21,6 +21,7 @@ public final class R {
         public static final int right=0x7f020007;
     }
     public static final class id {
+        public static final int btn_play=0x7f050006;
         public static final int contact_me=0x7f050005;
         public static final int imageico=0x7f050000;
         public static final int learn_me=0x7f050002;
@@ -31,6 +32,7 @@ public final class R {
     public static final class layout {
         public static final int listview=0x7f030000;
         public static final int main=0x7f030001;
+        public static final int showme=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
