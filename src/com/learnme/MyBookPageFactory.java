@@ -14,6 +14,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
+import android.graphics.Typeface;
+import android.text.Layout;
 import android.util.Log;
 
 
@@ -53,6 +55,8 @@ public class MyBookPageFactory {
 		mPaint.setTextAlign(Align.LEFT);
 		mPaint.setTextSize(m_fontSize);
 		mPaint.setColor(m_textColor);
+		mPaint.setFakeBoldText(true);
+		mPaint.setTypeface(Typeface.SERIF);
 		mVisibleWidth = mWidth - marginWidth * 2;
 		mVisibleHeight = mHeight - marginHeight * 2;
 		mLineCount = (int) (mVisibleHeight / m_fontSize); // 可显示的行数
