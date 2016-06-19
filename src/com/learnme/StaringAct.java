@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 
-import net.youmi.android.AdView;
-
 import com.ljp.ani.R;
 
 import android.annotation.SuppressLint;
@@ -57,14 +55,14 @@ public class StaringAct extends Activity implements Serializable{
 		setContentView(mPageWidget);
 		am = ActivityManager.getInstance();
 		am.addActivity(this);
-		AdView adView = new AdView(this); 
+
 		
 		@SuppressWarnings("deprecation")
 		FrameLayout.LayoutParams params = new 
 		FrameLayout.LayoutParams(FrameLayout.LayoutParams.FILL_PARENT, 
 		FrameLayout.LayoutParams.WRAP_CONTENT); 
 		params.gravity=Gravity.BOTTOM|Gravity.RIGHT;  
-		addContentView(adView, params);  
+	
 		dm=new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(dm);    
 		int width=dm.widthPixels;

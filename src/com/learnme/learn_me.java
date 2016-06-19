@@ -8,8 +8,6 @@ import java.util.Map;
 
 import com.ljp.ani.R;
 
-import net.youmi.android.AdView;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,15 +48,12 @@ public class learn_me extends ListActivity implements Serializable {
 			}
 			SimpleAdapter adapter=new SimpleAdapter(this,items,R.layout.listview,options,ico);
 			setListAdapter(adapter);
-			AdView adView = new AdView(this); 
+
 	         
 			FrameLayout.LayoutParams params = new 
 			FrameLayout.LayoutParams(FrameLayout.LayoutParams.FILL_PARENT, 
 			FrameLayout.LayoutParams.WRAP_CONTENT); 
 			params.gravity=Gravity.BOTTOM|Gravity.RIGHT;  
-			//Activity  
-			addContentView(adView, params);  
-			
 	
 	} 	
 		@Override
