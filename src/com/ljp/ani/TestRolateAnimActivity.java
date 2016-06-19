@@ -1,12 +1,12 @@
 package com.ljp.ani;
 
 
+import com.learnme.learn_me;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class TestRolateAnimActivity extends Activity {
@@ -32,8 +32,10 @@ public class TestRolateAnimActivity extends Activity {
 			@SuppressLint("ShowToast")
 			@Override
 			public void onClick() {
+				/*
 				Toast.makeText(TestRolateAnimActivity.this, "learn_me", 100)
 						.show();
+					*/
 				Intent intent = new Intent();
         		intent.setClass(TestRolateAnimActivity.this,learn_me.class);
         		startActivity(intent);
