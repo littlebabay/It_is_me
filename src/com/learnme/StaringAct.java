@@ -83,7 +83,7 @@ public class StaringAct extends Activity implements Serializable{
 			id=bud.getInt("id");
 			
 			copy(id);
-			bookPath="/data/data/com.sly.android.huangcun.ui/files/"+id+".txt";
+			bookPath="/data/data/com.ljp.ani/files/"+id+".txt";
 			pagefactory.openbook(bookPath);
 				pagefactory.onDraw(mCurPageCanvas);
 			
@@ -142,7 +142,7 @@ public class StaringAct extends Activity implements Serializable{
 	@SuppressLint("SdCardPath") 
 	private void copy(int id) {
 		try {
-			String filePath="/data/data/com.sly.android.huangcun.ui/files/";
+			String filePath="/data/data/com.ljp.ani/files/";
 			File file=new File(filePath);
 			if(!file.exists()){
 				file.mkdir();
