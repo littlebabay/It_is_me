@@ -98,9 +98,10 @@ public class MyPageWidget extends View {
 			mCornerY = 0;
 		else
 			mCornerY = mHeight;
-		if ((mCornerX == 0 && mCornerY == mHeight)
-				|| (mCornerX == mWidth && mCornerY == 0))
+		
+		if ((mCornerX == 0 && mCornerY == mHeight)|| (mCornerX == mWidth && mCornerY == 0))
 			mIsRTandLB = true;
+		
 		else
 			mIsRTandLB = false;
 	}
