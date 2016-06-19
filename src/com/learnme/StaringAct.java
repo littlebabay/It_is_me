@@ -13,7 +13,6 @@ import com.ljp.ani.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -39,18 +38,18 @@ public class StaringAct extends Activity implements Serializable{
 	Bitmap mCurPageBitmap, mNextPageBitmap;
 	Canvas mCurPageCanvas, mNextPageCanvas;
 	MyBookPageFactory pagefactory;
-	private int id;
 	private String bookPath;
 	private DisplayMetrics dm;
 	private ActivityManager am;
 	public int bookName =0;
 	public int fileNameSingle =0;
-	
+	private String filename = "resume"; //file name
 	
 	@SuppressLint({ "WrongCall", "SdCardPath", "ClickableViewAccessibility" }) @Override
 	public void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
-		//AdManager.init(StaringAct.this,"0f34f539f9d030b4","612c3c56a1fab5c1",50,false); 
+		
 		mPageWidget = new MyPageWidget(this);
 		setContentView(mPageWidget);
 		am = ActivityManager.getInstance();
@@ -77,13 +76,11 @@ public class StaringAct extends Activity implements Serializable{
 		pagefactory.setBgBitmap(BitmapFactory.decodeResource(
 				this.getResources(), R.drawable.bookback));
 		try {
-			Bundle bud=this.getIntent().getExtras();
-			id=bud.getInt("id");
 			
-			copy(id);
-			bookPath="/data/data/com.ljp.ani/files/"+id+".txt";
+			copy(filename);
+			bookPath="/data/data/com.ljp.ani/files/"+filename+".txt";
 			pagefactory.openbook(bookPath);
-				pagefactory.onDraw(mCurPageCanvas);
+			pagefactory.onDraw(mCurPageCanvas);
 			
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -91,10 +88,7 @@ public class StaringAct extends Activity implements Serializable{
 					Toast.LENGTH_SHORT).show();
 		}
 		
-		Intent intent = getIntent();
-		Bundle bundle = intent.getExtras();
-		fileNameSingle=bundle.getInt("id");
-		bookName=bundle.getInt("id");
+
 		mPageWidget.setBitmaps(mCurPageBitmap, mCurPageBitmap);
 
 		
@@ -138,19 +132,23 @@ public class StaringAct extends Activity implements Serializable{
 	}
 
 	@SuppressLint("SdCardPath") 
-	private void copy(int id) {
+	private void copy(String filename) {
+		
+		
 		try {
+			
 			String filePath="/data/data/com.ljp.ani/files/";
 			File file=new File(filePath);
 			if(!file.exists()){
 				file.mkdir();
 			}
 			AssetManager assetManage=this.getAssets();
-			if(!new File(filePath+id+".txt").exists()){
-				InputStream in=assetManage.open(id+".jpg");
+			
+			if(!new File(filePath+filename+".txt").exists()){
+				InputStream in=assetManage.open(filename+".jpg");
 				BufferedInputStream bis = new BufferedInputStream(in);
 				 BufferedOutputStream bos = new BufferedOutputStream(
-				 new FileOutputStream(filePath+id+".txt"));
+				 new FileOutputStream(filePath+filename+".txt"));
 				 byte[] buffer = new byte[8192];
 				 int length = 0;
 				 while ((length = (bis.read(buffer))) > 0) {

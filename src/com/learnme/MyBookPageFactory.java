@@ -31,11 +31,11 @@ public class MyBookPageFactory {
 	private int page = 0;
 	private Vector<String> m_lines = new Vector<String>();
 
-	private int m_fontSize =39; 
-	private int m_textColor = Color.RED;
+	private int m_fontSize =64; 
+	private int m_textColor = Color.BLACK;
 	private int m_backColor = 0xffff9e85; // 背景颜色
-	private int marginWidth = 15; // 左右与边缘的距离
-	private int marginHeight = 50; // 上下与边缘的距离
+	private int marginWidth = 80; // 左右与边缘的距离
+	private int marginHeight = 80; // 上下与边缘的距离
 
 	private int mLineCount; // 每页可以显示的行数
 	private float mVisibleHeight; // 绘制内容的宽

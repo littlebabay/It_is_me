@@ -1,7 +1,7 @@
 package com.ljp.ani;
 
 
-import com.learnme.learn_me;
+import com.learnme.StaringAct;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -37,7 +37,7 @@ public class TestRolateAnimActivity extends Activity {
 						.show();
 					*/
 				Intent intent = new Intent();
-        		intent.setClass(TestRolateAnimActivity.this,learn_me.class);
+        		intent.setClass(TestRolateAnimActivity.this,StaringAct.class);
         		startActivity(intent);
         		//TestRolateAnimActivity.this.finish();
         		
