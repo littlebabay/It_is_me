@@ -51,9 +51,10 @@ public class TestRolateAnimActivity extends Activity {
 			@SuppressLint("ShowToast")
 			@Override
 			public void onClick() {
+				/*
 				Toast.makeText(TestRolateAnimActivity.this, "show_me", 100)
 						.show();
-				
+				*/
 				Intent intent = new Intent();
         		intent.setClass(TestRolateAnimActivity.this,showme.class);
         		startActivity(intent);
