@@ -29,8 +29,8 @@ public class showme extends Activity {
 		 
 			public void onClick(View v) {  
 		       
-		    	url = "/storage/emulated/0/girl.mp4";
-        		
+		    	//url = "/storage/emulated/0/girl.mp4";
+        		url="http://www.openengineer.cn/videos/girl.mp4";
 		        Intent it = new Intent(); 
 		        it.setAction(Intent.ACTION_VIEW);  
 		        it.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  
