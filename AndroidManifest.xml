@@ -39,7 +39,12 @@
       	     
       	 </activity>
       	 
-
+		 <activity 
+      	     
+      	     android:label="@string/app_name"
+      	     android:name="com.contactme.contactme">
+      	     
+      	 </activity>
       	  
     </application>
 

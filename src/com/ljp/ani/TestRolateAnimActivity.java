@@ -1,6 +1,7 @@
 package com.ljp.ani;
 
 
+import com.contactme.contactme;
 import com.learnme.StaringAct;
 import com.showme.showme;
 
@@ -8,7 +9,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class TestRolateAnimActivity extends Activity {
 	
@@ -61,25 +61,33 @@ public class TestRolateAnimActivity extends Activity {
 			}
 		});
 		
-		//on click handler for the contact_me UI
-		UI_contact_me.setOnClickIntent(new MyImageView.OnViewClick() {
 
-			@SuppressLint("ShowToast")
-			@Override
-			public void onClick() {
-				Toast.makeText(TestRolateAnimActivity.this, "contact_me", 100)
-						.show();
-			}
-		});
-		
 		//on click hander for the weather UI
 		UI_weather.setOnClickIntent(new MyImageView.OnViewClick() {
 
 			@SuppressLint("ShowToast")
 			@Override
 			public void onClick() {
+				
+				/*
 				Toast.makeText(TestRolateAnimActivity.this, "weather", 100)
 						.show();
+				*/
+			}
+		});
+		//on click handler for the contact_me UI
+		UI_contact_me.setOnClickIntent(new MyImageView.OnViewClick() {
+
+			@SuppressLint("ShowToast")
+			@Override
+			public void onClick() {
+				/*
+				Toast.makeText(TestRolateAnimActivity.this, "contact_me", 100)
+						.show();
+						*/
+				Intent intent = new Intent();
+        		intent.setClass(TestRolateAnimActivity.this,contactme.class);
+        		startActivity(intent);
 			}
 		});
 		
