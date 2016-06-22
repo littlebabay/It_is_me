@@ -3,6 +3,7 @@ package com.ljp.ani;
 
 import com.contactme.contactme;
 import com.learnme.StaringAct;
+import com.reserve.reserve;
 import com.showme.showme;
 
 import android.annotation.SuppressLint;
@@ -12,7 +13,7 @@ import android.os.Bundle;
 
 public class TestRolateAnimActivity extends Activity {
 	
-	MyImageView UI_learn_me,UI_show_me,UI_contact_me,UI_weather;
+	MyImageView UI_learn_me,UI_show_me,UI_contact_me,UI_Reserve;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class TestRolateAnimActivity extends Activity {
 		UI_learn_me = (MyImageView) findViewById(R.id.learn_me);
 		UI_show_me = (MyImageView) findViewById(R.id.show_me);
 		UI_contact_me = (MyImageView) findViewById(R.id.contact_me);
-		UI_weather = (MyImageView) findViewById(R.id.weather);
+		UI_Reserve = (MyImageView) findViewById(R.id.Reserve);
 		
 	
 		
@@ -61,20 +62,6 @@ public class TestRolateAnimActivity extends Activity {
 			}
 		});
 		
-
-		//on click hander for the weather UI
-		UI_weather.setOnClickIntent(new MyImageView.OnViewClick() {
-
-			@SuppressLint("ShowToast")
-			@Override
-			public void onClick() {
-				
-				/*
-				Toast.makeText(TestRolateAnimActivity.this, "weather", 100)
-						.show();
-				*/
-			}
-		});
 		//on click handler for the contact_me UI
 		UI_contact_me.setOnClickIntent(new MyImageView.OnViewClick() {
 
@@ -88,6 +75,24 @@ public class TestRolateAnimActivity extends Activity {
 				Intent intent = new Intent();
         		intent.setClass(TestRolateAnimActivity.this,contactme.class);
         		startActivity(intent);
+			}
+		});
+		
+		//on click hander for the weather UI
+		UI_Reserve.setOnClickIntent(new MyImageView.OnViewClick() {
+
+					@SuppressLint("ShowToast")
+					@Override
+			public void onClick() {
+						
+						/*
+						Toast.makeText(TestRolateAnimActivity.this, "weather", 100)
+								.show();
+						*/
+				Intent intent = new Intent();
+		        intent.setClass(TestRolateAnimActivity.this,reserve.class);
+		        startActivity(intent);		
+						
 			}
 		});
 		
