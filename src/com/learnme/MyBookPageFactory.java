@@ -59,7 +59,7 @@ public class MyBookPageFactory {
 		mPaint.setTypeface(Typeface.SERIF);
 		mVisibleWidth = mWidth - marginWidth * 2;
 		mVisibleHeight = mHeight - marginHeight * 2;
-		mLineCount = (int) (mVisibleHeight / m_fontSize); // 可显示的行数
+		mLineCount = (int) (mVisibleHeight / m_fontSize - 1); // 可显示的行数
 	}
 /**
  * 打开书籍
